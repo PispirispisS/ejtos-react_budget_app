@@ -5,7 +5,8 @@ import Budget from './components/Budget';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
-import RemainingBudget from './components/Remaining';
+import Remaining from './components/Remaining';
+import CurrencyDropdown from './components/CurrencyDropdown'; // Nuevo componente agregado
 import { AppProvider } from './context/AppContext';
 
 const App = () => {
@@ -18,10 +19,13 @@ const App = () => {
                         <Budget />
                     </div>
                     <div className='col-sm'>
-                        <RemainingBudget />
+                        <Remaining />
                     </div>
                     <div className='col-sm'>
                         <ExpenseTotal />
+                    </div>
+                    <div className='col-sm'>
+                        <CurrencyDropdown /> {/* Nuevo componente agregado */}
                     </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
@@ -33,7 +37,7 @@ const App = () => {
                 <h3 className='mt-3'>Change allocation</h3>
                 <div className='row mt-3'>
                     <div className='col-sm'>
-                        <AllocationForm/>
+                        <AllocationForm />
                     </div>
                 </div>
             </div>
@@ -42,3 +46,4 @@ const App = () => {
 };
 
 export default App;
+
